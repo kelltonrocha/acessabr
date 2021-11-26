@@ -1,0 +1,16 @@
+$mobileLarge: 425px;
+$mobileSmall: 300px;
+$iPad: 767px;
+$desktop: 1023px; //max-width - a partir de 1024 desktop padrão
+
+@media(max-width: $iPad){ //esconde hide-mobile se for mobile
+    .hide-mobile{
+        display: none;
+    }
+}
+
+@media (min-width: $iPad){ //esconde hide-desktop se resolução > 767
+    .hide-desktop{
+        display: none;
+    }
+}
