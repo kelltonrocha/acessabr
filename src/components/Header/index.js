@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import './style.scss';
 import logoAcessaBR from '../../images/logoAcessaBR.svg'
 import logoEbac from '../../images/logo_ebac.svg'
+import { LocationContext } from "../../contexts/LocationContext";
 
-const Header = props => { //ao invés de usar vazio, posso passar PROPS e usar propriedades (ex: city e state)
+const Header = () => { // usando contexts (ex: city e state)
+    
+    const {city, state} = useContext(LocationContext)
+    
     return(
         <header className="header__container">
             <div className="header__logo header__logo--state">
                 <img src={logoAcessaBR} alt="Logo AcessaBR"/>
                 <span className="header__city">
-                     / {props.city} - {props.state}
+                     / {city} - {state}
                 </span>
             </div>
             <div className="header__logo header__logo--ebac">
