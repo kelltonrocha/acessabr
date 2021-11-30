@@ -14,10 +14,10 @@ function Slider() {
 
     useEffect(() => {
         const fetchPlaces = async () => { //resposta assincrona pois não se sabe qd o resultado é retornado
-            const result = await api.get(`/places?category_like=${filteredPlace}`)   //await: boa prática com async.
+            const result = await api.get(`?category_like=${filteredPlace ? filteredPlace : ''}`)   //await: boa prática com async.
 
             if(result.status==200) { //código padrão http requisição success
-                setPlaces(result.data)
+                setPlaces(result.data.places)
             }            
         }
         fetchPlaces()
