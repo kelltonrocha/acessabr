@@ -10,6 +10,7 @@
         border-radius: 1rem;
         box-sizing: border-box;
         height: 222px;
+        overflow: hidden; //cantos arredondados
         width: 100%;
     }
 
@@ -21,6 +22,7 @@
             font-size: 2.4rem;
             line-height: 2.8rem;
             color: var(--black);
+            height: 5.5rem;
         }
 
         p{

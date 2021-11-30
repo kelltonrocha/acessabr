@@ -9,19 +9,19 @@ import api from "../../config/api";
 SwiperCore.use(Pagination);
 
 function Slider() {
-    const {filteredPlaces, setFilteredPlaces} = useContext(FilterContext)
+    const {filteredPlace, setFilteredPlace} = useContext(FilterContext)
     const [places, setPlaces] = useState([])
 
     useEffect(() => {
         const fetchPlaces = async () => { //resposta assincrona pois não se sabe qd o resultado é retornado
-            const result = await api.get(`/places?category=${filteredPlaces}`)   //await: boa prática com async.
+            const result = await api.get(`/places?category_like=${filteredPlace}`)   //await: boa prática com async.
 
             if(result.status==200) { //código padrão http requisição success
                 setPlaces(result.data)
             }            
         }
         fetchPlaces()
-    }, [filteredPlaces])
+    }, [filteredPlace])
 
     return( 
         <Swiper 

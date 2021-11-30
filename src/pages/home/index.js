@@ -1,19 +1,27 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './style.scss';
 import imageDestack from '../../images/Imagem-Destaque.png';
+import { FilterContext } from '../../contexts/FilterContext';
 import Pills from '../../components/Pills';
 import { useParams } from 'react-router';
 import { LocationContext } from '../../contexts/LocationContext';
 
 const PLACES = [
-    'Praça','Parque','Igreja','Hotel','Restaurante','Farmácia','Lojas','Aquário'
+    'Praça','Parque','Igreja','Museu','Forte','Teatro','Todos'
 ]
 
 const Home = () => {
-    const [selectedPill, setSelectedPill] = useState('')
-    
     const {city, state} = useParams()
     const {setCity, setState} = useContext(LocationContext)
+    const {filteredPlace, setFilteredPlace} = useContext(FilterContext)
+
+    const handleFilterPlace = (item) => {
+        if(item === 'Todos'){
+            setFilteredPlace('')
+            return
+        }
+        setFilteredPlace(item)
+    }
 
     useEffect(() => {
         setCity(city)
@@ -37,8 +45,8 @@ const Home = () => {
                         PLACES.map((item) => (
                             <Pills
                                 local={item}
-                                selected={selectedPill === item}
-                                onClick={ () => setSelectedPill(item) }
+                                selected={filteredPlace === item}
+                                onClick={ () => handleFilterPlace(item) }
                             />
                         ))
                     }

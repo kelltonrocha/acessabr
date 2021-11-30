@@ -5,6 +5,8 @@
             "name": "Parque da Cidade",
             "description": "Descrição",
             "image": "/places/parque-da-cidade.jpg",
+            "category": "Parque",
+            "link": "https://www2.natal.rn.gov.br/parquedacidade/",
             "location": {
                 "lat": "1234",
                 "long": "4321"
@@ -27,6 +29,8 @@
             "name": "Parque das Dunas",
             "description": "Descrição",
             "image": "/places/parque-das-dunas.JPG",
+            "category": "Parque",
+            "link": "http://www.parquedasdunas.rn.gov.br/",
             "location": {
                 "lat": "1234",
                 "long": "4321"
@@ -49,6 +53,8 @@
             "name": "Fortaleza dos Reis Magos",
             "image": "/places/forte-reis-magos.jpeg",
             "description": "Descrição",
+            "category": "Forte",
+            "link": "https://pt.wikipedia.org/wiki/Forte_dos_Reis_Magos",
             "location": {
                 "lat": "1234",
                 "long": "4321"
@@ -71,6 +77,8 @@
             "name": "Teatro Alberto Maranhão",
             "image": "/places/teatro-alberto-maranhao.jpg",
             "description": "Descrição",
+            "category": "Teatro",
+            "link": "http://www.ipatrimonio.org/natal-teatro-alberto-maranhao/",
             "location": {
                 "lat": "1234",
                 "long": "4321"
@@ -93,6 +101,8 @@
             "name": "Memorial Câmara Cascudo",
             "image": "/places/memorial-camara-cascudo.jpg",
             "description": "Descrição",
+            "category": "Museu",
+            "link": "https://pt.wikipedia.org/wiki/Memorial_C%C3%A2mara_Cascudo",
             "location": {
                 "lat": "1234",
                 "long": "4321"
